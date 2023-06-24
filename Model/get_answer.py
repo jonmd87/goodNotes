@@ -1,6 +1,4 @@
-CHOOSE = "Choose: "
-
-
+from Model.constants import *
 def get_answer():
     string = str(input(CHOOSE))
     for char in string:
