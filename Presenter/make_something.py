@@ -15,9 +15,11 @@ def make_something(choose, notes_dict):
         case 2:
             list_of_notes(notes_dict)
         case 3:
+            make_something(2, notes_dict)
             make_something(4, notes_dict)
             make_something(1, notes_dict)
         case 4:
+            make_something(2, notes_dict)
             delete_note(notes_dict, get_date())
         case _:
             print(ERROR)
