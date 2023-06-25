@@ -1,4 +1,3 @@
-from Model.change_note import change_note
 from Model.delete_note import delete_note
 from Model.list_of_notes import list_of_notes
 from Model.add_new_note import add_new_note
@@ -10,6 +9,7 @@ def make_something(choose, notes_dict):
     match choose:
         case 0:
             write_file(notes_dict)
+            return
         case 1:
             add_new_note(notes_dict, collect_new_note())
         case 2:
@@ -26,7 +26,7 @@ def make_something(choose, notes_dict):
 def collect_new_note():
     title = str(input(TITLE))
     body = str(input(BODY))
-    return title + SEPARATOR + body
+    return [title, body]
 
 
 def get_date():
